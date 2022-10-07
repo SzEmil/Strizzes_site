@@ -1,0 +1,17 @@
+body {
+  font-family: "Roboto", "Raleway", sans-serif;
+  color: black;
+  margin: auto;
+}
+@media screen and (max-width: 768px) {
+  body {
+    min-width: 320px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    // max-width: 1600px;
+    width: 100%;
+  }
+}
