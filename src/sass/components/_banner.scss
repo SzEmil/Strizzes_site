@@ -31,7 +31,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 100px;
+  padding-top: 50px;
   .logo {
     animation-name: logos;
     animation-duration: 2s;
@@ -44,7 +44,7 @@
   &__slogan {
     width: 500px;
     padding-left: 40px;
-    padding-top: 250px;
+    padding-top: 350px;
 
     animation-name: logos;
     animation-duration: 2s;
@@ -69,7 +69,7 @@
     transition: 0.5s;
 
     &:hover {
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba(255, 255, 255, 0.8);
 
       span:nth-child(1) {
         transform: scaleY(1);
@@ -99,13 +99,7 @@
     span {
       display: block;
       position: absolute;
-      background: radial-gradient(
-        circle,
-        rgba(244, 127, 32, 1) 7%,
-        rgba(2, 0, 36, 1) 58%,
-        rgba(0, 211, 255, 0) 100%
-      );
-
+      background-color: white;
       &:nth-child(1) {
         right: 0;
         bottom: 0;
