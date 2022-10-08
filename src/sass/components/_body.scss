@@ -1,7 +1,9 @@
 body {
-  font-family: "Roboto", "Raleway", sans-serif;
+  font-family: "Kanit", "Roboto", sans-serif;
   color: black;
+  background-color: black;
   margin: auto;
+  background-image: url(../src/images/header/icon_back.png);
 }
 @media screen and (max-width: 768px) {
   body {

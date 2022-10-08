@@ -27,9 +27,11 @@
   }
 }
 body {
-  font-family: "Roboto", "Raleway", sans-serif;
+  font-family: "Kanit", "Roboto", sans-serif;
   color: black;
+  background-color: black;
   margin: auto;
+  background-image: url(../src/images/header/icon_back.png);
 }
 
 @media screen and (max-width: 768px) {
@@ -42,18 +44,66 @@ body {
     width: 100%;
   }
 }
+header {
+  background-color: transparent;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+}
+
 .navigation__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.125;
+  letter-spacing: 0.02em;
+  padding: 20px 0;
+  -webkit-animation-name: animNavigation;
+          animation-name: animNavigation;
+  -webkit-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+  -webkit-animation-direction: right;
+          animation-direction: right;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navigation__link {
+  color: white;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navigation__link:hover, .navigation__link:focus {
+  color: rgb(232, 78, 15);
 }
 
+@-webkit-keyframes animNavigation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animNavigation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .banner {
   z-index: 0;
-  background-color: black;
-  width: 100vw;
-  height: 100vh;
+  background-color: transparent;
 }
 
 .wrapper {
@@ -387,4 +437,30 @@ body {
   to {
     background-color: white;
   }
+}
+.services {
+  background-color: gray;
+  width: 100%;
+}
+
+.foot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.foot__img {
+  width: 300px;
+}
+.foot__link {
+  color: white;
 }

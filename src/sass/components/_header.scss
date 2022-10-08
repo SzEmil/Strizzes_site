@@ -1,6 +1,44 @@
+header {
+  background-color: transparent;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+}
+
 .navigation {
   &__list {
     display: flex;
-    gap: 30px;
+    justify-content: center;
+    gap: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: calc(18px / 16px);
+    letter-spacing: 0.02em;
+
+    padding: 20px 0;
+
+    animation-name: animNavigation;
+    animation-duration: 3.5s;
+    animation-direction: right;
+    animation-timing-function: $animationTiming;
+  }
+
+  &__link {
+    color: white;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: rgba(232, 78, 15, 255);
+    }
+  }
+}
+
+@keyframes animNavigation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
