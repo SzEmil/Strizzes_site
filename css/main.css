@@ -60,6 +60,7 @@ header {
       -ms-flex-pack: end;
           justify-content: end;
   position: relative;
+  padding: 25px 0;
 }
 .headBar__logo {
   display: -webkit-inline-box;
@@ -100,7 +101,6 @@ header {
   font-weight: 500;
   line-height: 1.125;
   letter-spacing: 0.02em;
-  padding: 20px 0;
   -webkit-animation-name: aniHead;
           animation-name: aniHead;
   -webkit-animation-duration: 2s;
@@ -526,11 +526,11 @@ header {
           animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .introduction__title {
-  width: 300px;
+  width: 320px;
   text-align: left;
-  font-style: "Roboto";
-  font-weight: 400;
-  font-size: 24px;
+  font-style: "Kanit";
+  font-weight: 200;
+  font-size: 28px;
   line-height: 1.4;
   letter-spacing: 0.02em;
   color: rgb(51, 51, 51);
@@ -544,15 +544,15 @@ header {
 }
 .introduction__description {
   padding-top: 40px;
-  font-style: "Roboto";
-  font-weight: 400;
-  font-size: 12px;
+  font-family: "Kanit";
+  font-weight: 200;
+  font-size: 14px;
   line-height: 1.4;
   letter-spacing: 0.02em;
 }
 .introduction__link {
   display: block;
-  font-style: "Roboto";
+  font-family: "Kanit";
   font-weight: 400;
   font-size: 14px;
   line-height: 2;
@@ -570,7 +570,7 @@ header {
   position: absolute;
   right: 0;
   bottom: 0;
-  font-style: "Roboto";
+  font-family: "Kanit";
   font-weight: 400;
   font-size: 14px;
   line-height: 2;
@@ -596,10 +596,182 @@ header {
   }
 }
 .services {
-  background-color: gray;
-  width: 100%;
+  background-image: url(../src/images/services/services_background.jpg);
+  background-size: cover;
+  background-repeat: none;
+}
+.services__box {
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.services__description {
+  width: 700px;
+  padding-right: 20px;
+  -webkit-animation-name: animServices;
+          animation-name: animServices;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-direction: right;
+          animation-direction: right;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.services__title {
+  color: white;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.02em;
+}
+.services__text {
+  color: white;
+  padding: 40px 0;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+.services__title-inderline {
+  margin-top: 20px;
+  width: 50px;
+  height: 2px;
+  position: absolute;
+  background-color: rgb(232, 78, 15);
+}
+.services__button {
+  background-color: rgb(232, 78, 15);
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
 }
 
+.abilities {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.abilities__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 0;
+  -webkit-animation-name: animAbilities;
+          animation-name: animAbilities;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  animation-direction: reverse;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.abilities__card {
+  width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+.abilities__card-text {
+  color: black;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+.abilities__card-svg-background {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgb(232, 78, 15);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.abilities__card-svg {
+  fill: white;
+  padding: 10px;
+}
+.abilities__card-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 10px;
+}
+.abilities__card-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  padding-bottom: 10px;
+}
+
+@-webkit-keyframes animAbilities {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animAbilities {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes animServices {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes animServices {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .foot {
   display: -webkit-box;
   display: -ms-flexbox;
