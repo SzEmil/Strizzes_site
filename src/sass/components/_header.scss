@@ -1,12 +1,36 @@
 header {
-  background-color: transparent;
+  background-color: white;
   border-bottom: solid 1px rgba(0, 0, 0, 0.1);
 }
 
+.headBar {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+
+  &__logo {
+    display: inline-flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    animation-name: logoHead;
+    animation-duration: 2s;
+    animation-direction: right;
+    animation-timing-function: $animationTiming;
+  }
+  &__img {
+    width: 300px;
+  }
+}
+
 .navigation {
+  display: flex;
   &__list {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     gap: 40px;
     font-size: 16px;
     font-weight: 500;
@@ -15,14 +39,14 @@ header {
 
     padding: 20px 0;
 
-    animation-name: animNavigation;
-    animation-duration: 3.5s;
-    animation-direction: right;
+    animation-name: aniHead;
+    animation-duration: 2s;
+    animation-direction: reverse;
     animation-timing-function: $animationTiming;
   }
 
   &__link {
-    color: white;
+    color: black;
 
     transition-property: color;
     transition-duration: 250ms;
@@ -34,11 +58,22 @@ header {
   }
 }
 
-@keyframes animNavigation {
+@keyframes logoHead {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes aniHead {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-70px);
+    opacity: 0;
   }
 }

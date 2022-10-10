@@ -6,9 +6,26 @@
 
   &__img {
     width: 300px;
+
+    animation-name: aniFooter;
+    animation-duration: 2s;
+    animation-timing-function: $animationTiming;
   }
 
   &__link {
     color: white;
+
+    animation-name: aniFooter;
+    animation-duration: 2s;
+    animation-timing-function: $animationTiming;
+  }
+}
+
+@keyframes aniFooter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

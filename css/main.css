@@ -45,34 +45,72 @@ body {
   }
 }
 header {
-  background-color: transparent;
+  background-color: white;
   border-bottom: solid 1px rgba(0, 0, 0, 0.1);
 }
 
+.headBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  position: relative;
+}
+.headBar__logo {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation-name: logoHead;
+          animation-name: logoHead;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-direction: right;
+          animation-direction: right;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.headBar__img {
+  width: 300px;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .navigation__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   gap: 40px;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.125;
   letter-spacing: 0.02em;
   padding: 20px 0;
-  -webkit-animation-name: animNavigation;
-          animation-name: animNavigation;
-  -webkit-animation-duration: 3.5s;
-          animation-duration: 3.5s;
-  -webkit-animation-direction: right;
-          animation-direction: right;
+  -webkit-animation-name: aniHead;
+          animation-name: aniHead;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  animation-direction: reverse;
   -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation__link {
-  color: white;
+  color: black;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 250ms;
@@ -84,7 +122,7 @@ header {
   color: rgb(232, 78, 15);
 }
 
-@-webkit-keyframes animNavigation {
+@-webkit-keyframes logoHead {
   from {
     opacity: 0;
   }
@@ -93,12 +131,36 @@ header {
   }
 }
 
-@keyframes animNavigation {
+@keyframes logoHead {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+@-webkit-keyframes aniHead {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateX(-70px);
+            transform: translateX(-70px);
+    opacity: 0;
+  }
+}
+@keyframes aniHead {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateX(-70px);
+            transform: translateX(-70px);
+    opacity: 0;
   }
 }
 .banner {
@@ -190,6 +252,7 @@ header {
   position: relative;
   font-weight: 600;
   font-size: 20px;
+  letter-spacing: 0.02em;
   -webkit-animation-name: logos;
           animation-name: logos;
   -webkit-animation-duration: 2s;
@@ -439,6 +502,99 @@ header {
     background-color: white;
   }
 }
+.introduction {
+  padding: 50px 0;
+  background-color: white;
+}
+.introduction__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.introduction__text-box {
+  position: relative;
+  padding-left: 40px;
+  -webkit-animation-name: introductionTextAnim;
+          animation-name: introductionTextAnim;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  animation-direction: reverse;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.introduction__title {
+  width: 300px;
+  text-align: left;
+  font-style: "Roboto";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  color: rgb(51, 51, 51);
+}
+.introduction span {
+  margin-top: 20px;
+  width: 300px;
+  height: 2px;
+  position: absolute;
+  background-color: rgb(194, 194, 194);
+}
+.introduction__description {
+  padding-top: 40px;
+  font-style: "Roboto";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+.introduction__link {
+  display: block;
+  font-style: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.02em;
+  color: rgb(232, 78, 15);
+  padding-top: 20px;
+}
+.introduction__img {
+  width: 700px;
+}
+.introduction__picture {
+  position: relative;
+}
+.introduction__img-description {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-style: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.02em;
+  color: rgba(128, 128, 128, 0.5);
+}
+
+@-webkit-keyframes introductionTextAnim {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes introductionTextAnim {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .services {
   background-color: gray;
   width: 100%;
@@ -461,7 +617,37 @@ header {
 }
 .foot__img {
   width: 300px;
+  -webkit-animation-name: aniFooter;
+          animation-name: aniFooter;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .foot__link {
   color: white;
+  -webkit-animation-name: aniFooter;
+          animation-name: aniFooter;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@-webkit-keyframes aniFooter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes aniFooter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
