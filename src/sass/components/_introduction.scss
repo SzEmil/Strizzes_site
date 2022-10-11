@@ -57,6 +57,10 @@
   }
   &__img {
     width: 700px;
+    animation-name: introductionTextAnim;
+    animation-duration: 1.5s;
+    animation-direction: reverse;
+    animation-timing-function: $animationTiming;
   }
   &__picture {
     position: relative;
