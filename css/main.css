@@ -189,8 +189,8 @@ header {
   height: 100%;
   -webkit-animation-name: logos;
           animation-name: logos;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
   -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
