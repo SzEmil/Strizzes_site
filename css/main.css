@@ -675,7 +675,7 @@ header {
           animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .abilities__card {
-  width: 290px;
+  min-width: 290px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -690,6 +690,7 @@ header {
 }
 .abilities__card-text {
   padding: 0 10px;
+  max-width: 400px;
   color: black;
   font-weight: 300;
   font-size: 14px;
@@ -733,91 +734,19 @@ header {
   .abilities {
     background-color: rgba(255, 255, 255, 0.9);
   }
-  .abilities__box {
+  .abilities__item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-preferred-size: 35%;
-        flex-basis: 35%;
-    gap: 20px;
-    padding: 40px 0;
-    -webkit-animation-name: animAbilities;
-            animation-name: animAbilities;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    animation-direction: reverse;
-    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .abilities__card {
-    width: 290px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    text-align: center;
+    -ms-flex-preferred-size: calc(50% - 40px);
+        flex-basis: calc(50% - 40px);
   }
   .abilities__card-text {
+    max-width: 500px;
     padding: 0 10px;
-    color: black;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 1.4;
-    letter-spacing: 0.02em;
-  }
-  .abilities__card-svg-background {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    background-color: rgb(232, 78, 15);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-  }
-  .abilities__card-svg {
-    fill: white;
-    padding: 10px;
-  }
-  .abilities__card-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding-bottom: 10px;
-  }
-  .abilities__card-title {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 1.4;
-    letter-spacing: 0.02em;
-    padding-bottom: 10px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .services {
-    background-image: url(../src/images/services/services_background.jpg);
-    background-size: cover;
-    background-repeat: none;
-  }
   .services__box {
     padding: 50px 0;
     display: -webkit-box;
@@ -835,136 +764,15 @@ header {
     width: 700px;
     padding-right: 20px;
     padding-bottom: 0px;
-    -webkit-animation-name: animServices;
-            animation-name: animServices;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-    -webkit-animation-direction: right;
-            animation-direction: right;
-    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .services__title {
-    color: white;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 1.1666666667;
-    letter-spacing: 0.02em;
-  }
-  .services__text {
-    color: white;
-    padding: 40px 0;
-    font-weight: 200;
-    font-size: 14px;
-    line-height: 1.4;
-    letter-spacing: 0.02em;
-  }
-  .services__title-underline {
-    margin-top: 20px;
-    width: 50px;
-    height: 2px;
-    position: absolute;
-    background-color: rgb(232, 78, 15);
   }
   .services__button {
-    background-color: rgb(232, 78, 15);
-    border: none;
-    border-radius: 1px;
-    cursor: pointer;
-    color: white;
     padding: 10px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.4;
-    letter-spacing: 0.02em;
-    -webkit-transition-property: background-color;
-    transition-property: background-color;
-    -webkit-transition-duration: 250ms;
-            transition-duration: 250ms;
-    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .services__button:hover {
-    background-color: rgb(175, 59, 13);
-  }
-  .abilities {
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-  .abilities__box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 20px;
-    padding: 40px 0;
-    -webkit-animation-name: animAbilities;
-            animation-name: animAbilities;
-    -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-    animation-direction: reverse;
-    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
   .abilities__card {
     width: 350px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    text-align: center;
   }
   .abilities__card-text {
     padding: 0;
-    color: black;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 1.4;
-    letter-spacing: 0.02em;
-  }
-  .abilities__card-svg-background {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    background-color: rgb(232, 78, 15);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-  }
-  .abilities__card-svg {
-    fill: white;
-    padding: 10px;
-  }
-  .abilities__card-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding-bottom: 10px;
-  }
-  .abilities__card-title {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 1.4;
-    letter-spacing: 0.02em;
-    padding-bottom: 10px;
   }
 }
 @-webkit-keyframes animAbilities {
