@@ -127,6 +127,12 @@
 }
 
 @media screen and (min-width: 769px) {
+  .services {
+    background-size: contain;
+
+    &__box{}
+  }
+
   .abilities {
     background-color: rgba($color: white, $alpha: 0.9);
 
@@ -145,6 +151,7 @@
 
 @media screen and (min-width: 1200px) {
   .services {
+    background-size: cover;
     &__box {
       padding: 50px 0;
       display: flex;

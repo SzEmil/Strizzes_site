@@ -731,6 +731,9 @@ header {
 }
 
 @media screen and (min-width: 769px) {
+  .services {
+    background-size: contain;
+  }
   .abilities {
     background-color: rgba(255, 255, 255, 0.9);
   }
@@ -747,6 +750,9 @@ header {
   }
 }
 @media screen and (min-width: 1200px) {
+  .services {
+    background-size: cover;
+  }
   .services__box {
     padding: 50px 0;
     display: -webkit-box;
