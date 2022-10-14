@@ -1,17 +1,18 @@
 .services {
   background-image: url(../src/images/services/services_background.jpg);
-  background-size: cover;
+  background-size: contain;
   background-repeat: none;
 
   &__box {
     padding: 50px 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
   }
   &__description {
-    width: 700px;
+    width: 100%;
     padding-right: 20px;
+    padding-bottom: 20px;
 
     animation-name: animServices;
     animation-duration: 2s;
@@ -80,13 +81,14 @@
     animation-timing-function: $animationTiming;
   }
   &__card {
-    width: 350px;
+    width: 290px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
 
     &-text {
+      padding: 0 10px;
       color: black;
       font-weight: 300;
       font-size: 14px;
@@ -123,7 +125,198 @@
   }
 }
 
+@media screen and (min-width: 769px) {
 
+.abilities {
+  background-color: rgba($color: white, $alpha: 0.9);
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-basis: (100% / 2 - 15);
+    gap: 20px;
+    padding: 40px 0;
+
+    animation-name: animAbilities;
+    animation-duration: 1s;
+    animation-direction: reverse;
+    animation-timing-function: $animationTiming;
+  }
+  &__card {
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    &-text {
+      padding: 0 10px;
+      color: black;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: calc(28 / 20);
+      letter-spacing: 0.02em;
+    }
+    &-svg-background {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(232, 78, 15, 255);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+    }
+    &-svg {
+      fill: white;
+      padding: 10px;
+    }
+
+    &-box {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 10px;
+    }
+
+    &-title {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: calc(28 / 20);
+      letter-spacing: 0.02em;
+
+      padding-bottom: 10px;
+    }
+  }
+}
+}
+
+@media screen and (min-width: 1200px) {
+  .services {
+    background-image: url(../src/images/services/services_background.jpg);
+    background-size: cover;
+    background-repeat: none;
+
+    &__box {
+      padding: 50px 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    &__description {
+      width: 700px;
+      padding-right: 20px;
+      padding-bottom: 0px;
+      animation-name: animServices;
+      animation-duration: 2s;
+      animation-direction: right;
+      animation-timing-function: $animationTiming;
+    }
+    &__title {
+      color: white;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: calc(28 / 24);
+      letter-spacing: 0.02em;
+    }
+    &__text {
+      color: white;
+      padding: 40px 0;
+      font-weight: 200;
+      font-size: 14px;
+      line-height: calc(28 / 20);
+      letter-spacing: 0.02em;
+    }
+    &__title-underline {
+      margin-top: 20px;
+      width: 50px;
+      height: 2px;
+      position: absolute;
+      background-color: rgba(232, 78, 15, 255);
+    }
+    &__button {
+      background-color: rgba(232, 78, 15, 255);
+      border: none;
+      border-radius: 1px;
+      cursor: pointer;
+
+      color: white;
+      padding: 10px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: calc(28 / 20);
+      letter-spacing: 0.02em;
+
+      transition-property: background-color;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover {
+        background-color: rgb(175, 59, 13);
+      }
+    }
+  }
+
+  .abilities {
+    background-color: rgba($color: white, $alpha: 0.9);
+
+    &__box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 40px 0;
+
+      animation-name: animAbilities;
+      animation-duration: 1s;
+      animation-direction: reverse;
+      animation-timing-function: $animationTiming;
+    }
+    &__card {
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+
+      &-text {
+        padding: 0;
+        color: black;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: calc(28 / 20);
+        letter-spacing: 0.02em;
+      }
+      &-svg-background {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(232, 78, 15, 255);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+      }
+      &-svg {
+        fill: white;
+        padding: 10px;
+      }
+
+      &-box {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 10px;
+      }
+
+      &-title {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: calc(28 / 20);
+        letter-spacing: 0.02em;
+
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
 
 @keyframes animAbilities {
   from {
