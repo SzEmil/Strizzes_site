@@ -236,16 +236,12 @@ header {
   .headBar {
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
     position: relative;
     padding: 25px 0;
 
     &__logo {
       display: inline-flex;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
 
       animation-name: logoHead;
       animation-duration: 2s;
@@ -289,17 +285,7 @@ header {
 
   .menu-button {
     display: none;
-    background-color: transparent;
-    outline: none;
-    border: none;
-    cursor: pointer;
 
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover {
-      fill: rgba(232, 78, 15, 255);
-    }
   }
 }
 
