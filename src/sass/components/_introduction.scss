@@ -4,12 +4,12 @@
 
   &__box {
     display: flex;
+    flex-direction: column;
     align-items: center;
   }
 
   &__text-box {
     position: relative;
-    padding-left: 40px;
 
     animation-name: introductionTextAnim;
     animation-duration: 1.5s;
@@ -17,7 +17,7 @@
     animation-timing-function: $animationTiming;
   }
   &__title {
-    width: 320px;
+    max-width: 450px;
     text-align: left;
     font-style: "Kanit";
     font-weight: 200;
@@ -30,7 +30,7 @@
 
   span {
     margin-top: 20px;
-    width: 300px;
+    width: 350px;
     height: 2px;
     position: absolute;
     background-color: rgb(194, 194, 194);
@@ -56,7 +56,7 @@
     padding-top: 20px;
   }
   &__img {
-    width: 700px;
+    width: 100%;
     animation-name: introductionTextAnim;
     animation-duration: 1.5s;
     animation-direction: reverse;
@@ -64,6 +64,7 @@
   }
   &__picture {
     position: relative;
+    max-width: 700px;
   }
   &__img-description {
     position: absolute;
@@ -80,9 +81,41 @@
 }
 
 @media screen and (min-width: 769px) {
+  .introduction {
+    &__title {
+      width: 500px;
+    }
+
+    span {
+      width: 400px;
+    }
+
+    &__img {
+      width: 700px;
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {
+  .introduction {
+    &__box {
+      flex-direction: row;
+    }
+
+    &__text-box {
+      padding-left: 40px;
+    }
+    &__title {
+      width: 320px;
+    }
+
+    span {
+      width: 300px;
+    }
+    &__img {
+      width: 700px;
+    }
+  }
 }
 
 @keyframes introductionTextAnim {

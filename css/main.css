@@ -56,21 +56,15 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
-  padding: 25px 0;
 }
 .headBar__logo {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   -webkit-animation-name: logoHead;
           animation-name: logoHead;
   -webkit-animation-duration: 2s;
@@ -85,9 +79,7 @@ header {
 }
 
 .navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
 }
 .navigation__list {
   display: -webkit-box;
@@ -122,6 +114,353 @@ header {
   color: rgb(232, 78, 15);
 }
 
+.menu-button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-button:hover {
+  fill: rgb(232, 78, 15);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 0 48px 40px;
+  background-color: white;
+  z-index: 999;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+.mobile-menu__button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding-right: 0;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu__button:hover {
+  fill: orange;
+}
+.mobile-menu__button-box {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mobile-menu__button-svg {
+  padding: 0px;
+}
+.mobile-menu.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.mobile-nav__social {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.02em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.mobile-nav__social .link-info:active {
+  color: orange;
+}
+.mobile-nav__item:nth-child(n+2) {
+  padding-top: 36px;
+}
+.mobile-nav__link {
+  color: black;
+  -webkit-transition-property: fill, color;
+  transition-property: fill, color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-nav__link:hover, .mobile-nav__link:focus {
+  color: orange;
+}
+.mobile-nav__link--active {
+  color: orange;
+}
+
+.mobile-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.1764705882;
+  letter-spacing: 0.02em;
+  display: flex;
+  padding-top: 302px;
+}
+.mobile-contact__link {
+  display: inline;
+  fill: orange;
+  color: black;
+  -webkit-transition-property: fill, color;
+  transition-property: fill, color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-contact__link:hover, .mobile-contact__link:focus, .mobile-contact__link:active {
+  color: orange;
+  fill: orange;
+}
+.mobile-contact__link--blue {
+  color: orange;
+}
+.mobile-contact__item:nth-child(2) {
+  padding-top: 32px;
+  font-size: 24px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.02em;
+}
+
+.mobile-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 5px;
+  padding-top: 64px;
+}
+.mobile-media__item:nth-child(n+2) {
+  padding-left: 10px;
+}
+.mobile-media__item:nth-child(-n+3)::after {
+  content: "";
+  margin-left: 10px;
+  width: 22px;
+  height: 0px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.mobile-media__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: orange;
+}
+
+@media screen and (min-width: 769px) {
+  header {
+    background-color: white;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  }
+  .headBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    position: relative;
+    padding: 25px 0;
+  }
+  .headBar__logo {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-animation-name: logoHead;
+            animation-name: logoHead;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-direction: right;
+            animation-direction: right;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .headBar__img {
+    width: 300px;
+  }
+  .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navigation__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    gap: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.125;
+    letter-spacing: 0.02em;
+    -webkit-animation-name: aniHead;
+            animation-name: aniHead;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    animation-direction: reverse;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .navigation__link {
+    color: black;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .navigation__link:hover, .navigation__link:focus {
+    color: rgb(232, 78, 15);
+  }
+  .menu-button {
+    display: none;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    -webkit-transition-property: fill;
+    transition-property: fill;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .menu-button:hover {
+    fill: rgb(232, 78, 15);
+  }
+}
+@media screen and (min-width: 1200px) {
+  header {
+    background-color: white;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  }
+  .headBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    position: relative;
+    padding: 25px 0;
+  }
+  .headBar__logo {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-animation-name: logoHead;
+            animation-name: logoHead;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-direction: right;
+            animation-direction: right;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .headBar__img {
+    width: 300px;
+  }
+  .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navigation__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    gap: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.125;
+    letter-spacing: 0.02em;
+    -webkit-animation-name: aniHead;
+            animation-name: aniHead;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    animation-direction: reverse;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .navigation__link {
+    color: black;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .navigation__link:hover, .navigation__link:focus {
+    color: rgb(232, 78, 15);
+  }
+}
 @-webkit-keyframes logoHead {
   from {
     opacity: 0;
@@ -130,7 +469,6 @@ header {
     opacity: 1;
   }
 }
-
 @keyframes logoHead {
   from {
     opacity: 0;
@@ -590,13 +928,16 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 .introduction__text-box {
   position: relative;
-  padding-left: 40px;
   -webkit-animation-name: introductionTextAnim;
           animation-name: introductionTextAnim;
   -webkit-animation-duration: 1.5s;
@@ -606,7 +947,7 @@ header {
           animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .introduction__title {
-  width: 320px;
+  max-width: 450px;
   text-align: left;
   font-style: "Kanit";
   font-weight: 200;
@@ -617,7 +958,7 @@ header {
 }
 .introduction span {
   margin-top: 20px;
-  width: 300px;
+  width: 350px;
   height: 2px;
   position: absolute;
   background-color: rgb(194, 194, 194);
@@ -641,7 +982,7 @@ header {
   padding-top: 20px;
 }
 .introduction__img {
-  width: 700px;
+  width: 100%;
   -webkit-animation-name: introductionTextAnim;
           animation-name: introductionTextAnim;
   -webkit-animation-duration: 1.5s;
@@ -652,6 +993,7 @@ header {
 }
 .introduction__picture {
   position: relative;
+  max-width: 700px;
 }
 .introduction__img-description {
   position: absolute;
@@ -665,6 +1007,37 @@ header {
   color: rgba(128, 128, 128, 0.5);
 }
 
+@media screen and (min-width: 769px) {
+  .introduction__title {
+    width: 500px;
+  }
+  .introduction span {
+    width: 400px;
+  }
+  .introduction__img {
+    width: 700px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .introduction__box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .introduction__text-box {
+    padding-left: 40px;
+  }
+  .introduction__title {
+    width: 320px;
+  }
+  .introduction span {
+    width: 300px;
+  }
+  .introduction__img {
+    width: 700px;
+  }
+}
 @-webkit-keyframes introductionTextAnim {
   from {
     opacity: 1;
@@ -673,7 +1046,6 @@ header {
     opacity: 0;
   }
 }
-
 @keyframes introductionTextAnim {
   from {
     opacity: 1;

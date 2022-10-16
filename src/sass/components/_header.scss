@@ -6,16 +6,15 @@ header {
 .headBar {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: space-between;
   position: relative;
-  padding: 25px 0;
 
   &__logo {
     display: inline-flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
 
     animation-name: logoHead;
     animation-duration: 2s;
@@ -28,7 +27,7 @@ header {
 }
 
 .navigation {
-  display: flex;
+  display: none;
   &__list {
     display: flex;
     justify-content: end;
@@ -56,11 +55,313 @@ header {
     }
   }
 }
+.menu-button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    fill: rgba(232, 78, 15, 255);
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 0 48px 40px;
+  background-color: white;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+
+  &__button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding-right: 0;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+
+    outline: none;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+      fill: orange;
+    }
+
+    &-box {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-svg {
+      padding: 0px;
+    }
+  }
+
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+
+.mobile-nav {
+  &__social {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    display: flex;
+    flex-direction: column;
+
+    .link-info:active {
+      color: orange;
+    }
+  }
+  &__item:nth-child(n + 2) {
+    padding-top: 36px;
+  }
+  &__link {
+    color: black;
+    transition-property: fill, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: orange;
+    }
+
+    &--active {
+      color: orange;
+    }
+  }
+}
+
+.mobile-contact {
+  display: flex;
+  flex-direction: column;
+
+  font-weight: 500;
+  font-size: 34px;
+  line-height: calc(40px / 34px);
+  letter-spacing: 0.02em;
+
+  display: flex;
+  padding-top: 302px;
+
+  &__link {
+    display: inline;
+    fill: orange;
+    color: black;
+
+    transition-property: fill, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: orange;
+      fill: orange;
+    }
+
+    &--blue {
+      color: orange;
+    }
+  }
+
+  &__item:nth-child(2) {
+    padding-top: 32px;
+
+    font-size: 24px;
+    line-height: calc(28px / 24px);
+    letter-spacing: 0.02em;
+  }
+}
+
+.mobile-media {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 5px;
+  padding-top: 64px;
+
+  &__item {
+    &:nth-child(n + 2) {
+      padding-left: 10px;
+    }
+    &:nth-child(-n + 3) {
+      &::after {
+        content: "";
+        margin-left: 10px;
+        width: 22px;
+        height: 0px;
+
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+
+    color: orange;
+  }
+}
 
 @media screen and (min-width: 769px) {
+  header {
+    background-color: white;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .headBar {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    padding: 25px 0;
+
+    &__logo {
+      display: inline-flex;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      animation-name: logoHead;
+      animation-duration: 2s;
+      animation-direction: right;
+      animation-timing-function: $animationTiming;
+    }
+    &__img {
+      width: 300px;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    &__list {
+      display: flex;
+      justify-content: end;
+      gap: 40px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: calc(18px / 16px);
+      letter-spacing: 0.02em;
+
+      animation-name: aniHead;
+      animation-duration: 2s;
+      animation-direction: reverse;
+      animation-timing-function: $animationTiming;
+    }
+
+    &__link {
+      color: black;
+
+      transition-property: color;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      &:hover,
+      &:focus {
+        color: rgba(232, 78, 15, 255);
+      }
+    }
+  }
+
+  .menu-button {
+    display: none;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+      fill: rgba(232, 78, 15, 255);
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {
+  header {
+    background-color: white;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .headBar {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    padding: 25px 0;
+
+    &__logo {
+      display: inline-flex;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      animation-name: logoHead;
+      animation-duration: 2s;
+      animation-direction: right;
+      animation-timing-function: $animationTiming;
+    }
+    &__img {
+      width: 300px;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    &__list {
+      display: flex;
+      justify-content: end;
+      gap: 40px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: calc(18px / 16px);
+      letter-spacing: 0.02em;
+
+      animation-name: aniHead;
+      animation-duration: 2s;
+      animation-direction: reverse;
+      animation-timing-function: $animationTiming;
+    }
+
+    &__link {
+      color: black;
+
+      transition-property: color;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      &:hover,
+      &:focus {
+        color: rgba(232, 78, 15, 255);
+      }
+    }
+  }
 }
 
 @keyframes logoHead {
