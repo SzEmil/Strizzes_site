@@ -51,7 +51,7 @@ header {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
     &:focus {
-      color: rgba(232, 78, 15, 255);
+      color: $main-color;
     }
   }
 }
@@ -65,7 +65,7 @@ header {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
-    fill: rgba(232, 78, 15, 255);
+    fill: $main-color;
   }
 }
 
@@ -98,7 +98,7 @@ header {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     &:hover {
-      fill: orange;
+      fill: $main-color;
     }
 
     &-box {
@@ -129,7 +129,7 @@ header {
     flex-direction: column;
 
     .link-info:active {
-      color: orange;
+      color: rgba(246, 140, 30, 255);
     }
   }
   &__item:nth-child(n + 2) {
@@ -143,11 +143,11 @@ header {
 
     &:hover,
     &:focus {
-      color: orange;
+      color: rgba(246, 140, 30, 255);
     }
 
     &--active {
-      color: orange;
+      color: rgba(246, 140, 30, 255);
     }
   }
 }
@@ -166,7 +166,7 @@ header {
 
   &__link {
     display: inline;
-    fill: orange;
+    fill: rgba(246, 140, 30, 255);
     color: black;
 
     transition-property: fill, color;
@@ -176,12 +176,12 @@ header {
     &:hover,
     &:focus,
     &:active {
-      color: orange;
-      fill: orange;
+      color: rgba(246, 140, 30, 255);
+      fill: rgba(246, 140, 30, 255);
     }
 
     &--blue {
-      color: orange;
+      color: rgba(246, 140, 30, 255);
     }
   }
 
@@ -238,11 +238,11 @@ header {
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 25px 0;
+    padding: 0px 0;
 
     &__logo {
       display: inline-flex;
-
+      padding-right: 20px;
       animation-name: logoHead;
       animation-duration: 2s;
       animation-direction: right;
@@ -285,7 +285,6 @@ header {
 
   .menu-button {
     display: none;
-
   }
 }
 

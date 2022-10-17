@@ -27,7 +27,7 @@
     width: 50px;
     height: 2px;
     position: absolute;
-    background-color: rgba(232, 78, 15, 255);
+    background-color: $main-color;
   }
 
   &__text {
@@ -54,7 +54,7 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {
-      color: rgba(232, 78, 15, 255);
+      color: $main-color;
     }
   }
 

@@ -84,7 +84,13 @@
                 nieograniczony kąt obrotu przegubów, udźwig do 5kg na
                 maksymalnym wysięgu.
               </p>
-              <a href="" class="introduction__link">Czytaj dalej...</a>
+              <button
+                type="button"
+                class="introduction__btn"
+                data-modal-introduction-open
+              >
+                Czytaj dalej...
+              </button>
             </div>
             <div class="introduction__picture">
               <img
@@ -105,12 +111,20 @@
               <h2 class="services__title">Poznaj nasze usługi</h2>
               <span class="services__title-underline"></span>
               <p class="services__text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum
-                natus maxime animi architecto odio reiciendis ea, atque ipsum
-                nobis repudiandae minima, possimus non delectus quas, distinctio
-                qui tempora dolore doloribus?
+                Niejednokrotnie projektując swoją linnie produkcyjną bądź
+                planując stanowisko zmagamy się z problemem dobrania
+                odpowiednich parametrów manipualtora. Dobierając odpowiednie
+                urzadzenie musimy wybierać optymalny wariant pomiędzy ceną,
+                rozmiarem, a parametrami mechanicznymi. Teraz nie musi to być
+                problem. Nasz zespół jest wstanie zaprojektować manipulator
+                specjalnie pod wymagania klienta. Zapraszamy do kontaktu
+                mailowego.
               </p>
-              <button class="services__button" type="button">
+              <button
+                class="services__button"
+                type="button"
+                data-modal-services
+              >
                 Dowiedz się więcej
               </button>
             </div>
@@ -235,10 +249,10 @@
               <h2 class="team__description-title">Poznaj nasz zespół</h2>
               <span class="team__description-underline"></span>
               <p class="team__description-text">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Possimus incidunt corrupti a perferendis unde asperiores soluta.
-                Assumenda fuga minima at, incidunt officiis commodi voluptas
-                autem reprehenderit iste iure a dignissimos?
+                Startup STRI<span class="team__description-text--orange">ZZES</span> tworzy zespół inżynierów z pasją.
+                Naszym celem jest poprawa wydajności i ograniczenie kosztów
+                produkcji przez tworzenie innowacyjnych manipulatorów z
+                autorskimi przekładniami.
               </p>
               <button class="team__description-button" type="button">
                 Czytaj dalej...
@@ -256,7 +270,8 @@
               <li><span class="contact-information__underline"></span></li>
               <li>
                 <p class="contact-information__text">
-                  jakiś tekst randomowy o tym jak sie z nami kontakować
+                  Zapytania dotyczące oferowanych usług prosimy składać drogą
+                  mailową bądź telefonicznie.
                 </p>
               </li>
               <li>
@@ -267,8 +282,8 @@
                 >
               </li>
               <li>
-                <a class="contact-information__link" href="tel: +48000000000"
-                  >+48000000000</a
+                <a class="contact-information__link" href="tel: +48887600255"
+                  >+48 887 600 255</a
                 >
               </li>
               <li>
@@ -320,6 +335,64 @@
         </ul>
       </div>
     </footer>
+
+    <div class="backdrop-introduction is-hidden" data-modal-introduction>
+      <div class="modal-introduction">
+        <button
+          type="button"
+          class="modal-introduction__btn"
+          data-modal-introduction-close
+        >
+          X
+        </button>
+        <article class="article-introduction">
+          <div class="article-introduction__text-box">
+            <h2 class="article-introduction__title">
+              Parametry docelowe manipulatora
+            </h2>
+            <p class="article-introduction__description">
+              Parametry manipulatora - zasięg maksymalny 1 metr, - obciążenie
+              maksymalne 5kg, - waga manipulatora mniejsza niż 9kg, - możliwie
+              wysoka precyzja pozycjonowania, - maksymalny chwilowy pobór prądu
+              30A, - możliwość nieograniczonego obracania efektorem końcowym, -
+              sześć stopni swobody, - zasilanie napięciem 24V, - praca w
+              zakresie temperatur -20 °C do +60 °C, - możliwość zmiany efektora
+              końcowego, - zdolność do pracy w warunkach wysokich wibracji. Aby
+              zapewnić możliwość orientacji w przestrzeni trzymanego przez
+              chwytak obiektu w dowolny sposób ilość stopni swobody manipulatora
+              została ustalona na: 6. Manipulator wykorzystuje 6 przegubów
+              obrotowych o jednym stopniu swobody. W celu redukcji kosztów i
+              poziomu skomplikowania w manipulatorze występują tylko 3 rodzaje
+              przegubów. Ostatnie przeguby 4,5,6 (licząc od podstawy) mają taką
+              samą konstrukcje. Przeguby 2,3 mają również taką samą konstrukcje.
+            </p>
+          </div>
+          <div class="article-introduction__img-box">
+            <img
+              class="article-introduction__img"
+              src="/src/images/header/baner.png"
+              alt="Manipulator Strizz v2"
+            />
+            <img
+              class="article-introduction__img"
+              src="/src/images/modal-introduction/przegob.jpg"
+              alt="Joint"
+            />
+            <img
+              class="article-introduction__img"
+              src="/src/images/modal-introduction/screws.png"
+              alt="Screws"
+            />
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="backdrop-services is-hidden" data-modal-services>
+      <div class="modal-introduction">
+        <button type="button" data-modal-services-close>X</button>
+      </div>
+    </div>
 
     <div class="mobile-menu js-menu-container" id="mobile-menu">
       <button class="mobile-menu__button js-close-menu">

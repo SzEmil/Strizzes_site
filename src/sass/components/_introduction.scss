@@ -44,16 +44,19 @@
     letter-spacing: 0.02em;
   }
 
-  &__link {
+  &__btn {
     display: block;
     font-family: "Kanit";
     font-weight: 400;
     font-size: 14px;
     line-height: calc(28 / 14);
     letter-spacing: 0.02em;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
 
-    color: rgba(232, 78, 15, 255);
-    padding-top: 20px;
+    color: $main-color;
+    margin-top: 20px;
   }
   &__img {
     width: 100%;

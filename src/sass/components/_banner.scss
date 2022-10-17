@@ -70,10 +70,9 @@
       font-size: 16px;
       line-height: calc(24 / 16);
       letter-spacing: 0.02em;
-      color: rgba(128, 128, 128, 0.5);
 
       padding-top: 20px;
-      color: rgba(232, 78, 15, 255);
+      color: $main-color;
     }
   }
   &__img-box {
@@ -213,7 +212,7 @@
     }
     &:hover svg,
     &:focus svg {
-      fill: rgba(232, 78, 15, 255);
+      fill: $main-color;
     }
   }
   &__icon {
@@ -254,7 +253,7 @@
 
   .social {
     position: absolute;
-    bottom: 50px;
+    bottom: 5px;
     right: 10px;
     display: flex;
     flex-direction: column;
