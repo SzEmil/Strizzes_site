@@ -2,7 +2,7 @@
   padding: 50px 0;
   background-image: url(../src/images/contact/contact_background.jpg);
   background-size: cover;
-  background-repeat: none;
+  background-repeat: no-repeat;
 
   &-box {
     display: flex;
@@ -79,10 +79,8 @@
   }
 }
 
-
 @media screen and (min-width: 769px) {
 }
 
 @media screen and (min-width: 1200px) {
-
 }

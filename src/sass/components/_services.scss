@@ -128,8 +128,8 @@
 
 @media screen and (min-width: 769px) {
   .services {
-    background-size: contain;
-    background-repeat: repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
     &__box {
     }
   }

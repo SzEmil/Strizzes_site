@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 15px 0;
 
   &__img {
     width: 300px;
@@ -14,10 +15,15 @@
 
   &__link {
     color: white;
-
     animation-name: aniFooter;
     animation-duration: 2s;
     animation-timing-function: $animationTiming;
+  }
+
+  &__item {
+    &:nth-child(n + 2) {
+      padding-top: 10px;
+    }
   }
 }
 
