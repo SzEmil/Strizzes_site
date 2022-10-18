@@ -17,6 +17,10 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  display: none;
+}
+.modal-intr {
+  display: block;
 }
 .modal-introduction {
   background-color: white;
@@ -24,6 +28,10 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  height: 80%;
+  width: 80%;
+  overflow-y: scroll;
 
   transition-property: opacity;
   transition-duration: 250ms;
@@ -36,26 +44,43 @@
 
   &__btn {
     position: absolute;
-    right: 5px;
-    top: 5px;
-    background-color: $main-color;
-    border: solid 1px gray;
-    border-radius: 5px;
-    color: white;
-    padding: 5px;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+    background-color: transparent;
+    border: none;
+    color: black;
   }
 }
 .article-introduction {
   padding: 20px;
   display: flex;
+  flex-direction: column;
 
   &__text-box {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    max-width: 800px;
+
+    padding-bottom: 50px;
   }
   &__title {
+    color: black;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: calc(28 / 24);
+    letter-spacing: 0.02em;
+
+    max-width: 400px;
   }
+
+  &__underline {
+    margin-top: 20px;
+    width: 200px;
+    height: 2px;
+    background-color: $main-color;
+  }
+
   &__description {
     padding-top: 20px;
     font-family: "Kanit";
@@ -67,9 +92,144 @@
 
   &__img-box {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
   }
   &__img {
-    width: 400px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .modal-introduction {
+    margin: 10px;
+
+    &__btn {
+      position: absolute;
+      cursor: pointer;
+      right: 10px;
+      top: 10px;
+      background-color: transparent;
+      border: none;
+      color: black;
+    }
+  }
+  .article-introduction {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    &__text-box {
+      display: flex;
+      flex-direction: column;
+      max-width: 800px;
+
+      padding-bottom: 50px;
+    }
+    &__title {
+      color: black;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: calc(28 / 24);
+      letter-spacing: 0.02em;
+
+      max-width: 400px;
+    }
+
+    &__underline {
+      margin-top: 20px;
+      width: 200px;
+      height: 2px;
+      background-color: $main-color;
+    }
+
+    &__description {
+      padding-top: 20px;
+      font-family: "Kanit";
+      font-weight: 200;
+      font-size: 14px;
+      line-height: calc(28 / 20);
+      letter-spacing: 0.02em;
+    }
+
+    &__img-box {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    &__img {
+      max-width: 600px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-introduction {
+    margin: 10px;
+
+    &__btn {
+      position: absolute;
+      cursor: pointer;
+      right: 10px;
+      top: 10px;
+      background-color: transparent;
+      border: none;
+      color: black;
+    }
+  }
+  .article-introduction {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    &__text-box {
+      display: flex;
+      flex-direction: column;
+      max-width: 800px;
+
+      padding-bottom: 50px;
+    }
+    &__title {
+      color: black;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: calc(28 / 24);
+      letter-spacing: 0.02em;
+
+      max-width: 400px;
+    }
+
+    &__underline {
+      margin-top: 20px;
+      width: 200px;
+      height: 2px;
+      background-color: $main-color;
+    }
+
+    &__description {
+      padding-top: 20px;
+      font-family: "Kanit";
+      font-weight: 200;
+      font-size: 14px;
+      line-height: calc(28 / 20);
+      letter-spacing: 0.02em;
+    }
+
+    &__img-box {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    &__img {
+      max-width: 800px;
+    }
+  }
+}
+
+@keyframes animModalIntroduction {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

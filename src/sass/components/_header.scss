@@ -72,14 +72,14 @@ header {
 .mobile-menu {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100vw;
+  right: 0;
+  width: 80vw;
   height: 100vh;
   padding: 48px 0 48px 40px;
   background-color: white;
   z-index: 999;
 
-  transform: translateX(100%);
+  transform: translateX(130%);
   transition: transform 250ms ease-in-out;
 
   &__button {
