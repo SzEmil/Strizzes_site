@@ -1850,6 +1850,7 @@ header {
 @media screen and (min-width: 1200px) {
   .modal-introduction {
     margin: 10px;
+    width: 60vw;
   }
   .modal-introduction__btn {
     position: absolute;
@@ -1926,6 +1927,194 @@ header {
   }
 }
 @keyframes animModalIntroduction {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.team-liner {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  background: rgb(246, 140, 30);
+  right: 0;
+  top: 0;
+}
+
+.team-page {
+  padding: 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.team-page__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 50px;
+  -webkit-animation-name: animTeamPage;
+          animation-name: animTeamPage;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-direction: right;
+          animation-direction: right;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team-page__description {
+  padding-top: 50px;
+  -webkit-animation-name: animTeamPage;
+          animation-name: animTeamPage;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-direction: right;
+          animation-direction: right;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team-page__description-title {
+  color: white;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.2222222222;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.team-page__description-text {
+  padding-top: 20px;
+  width: 500px;
+  color: white;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+.team-page__description-link {
+  display: block;
+  padding-top: 20px;
+}
+.team-page__description-button {
+  background-color: rgb(246, 140, 30);
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team-page__description-button:hover {
+  background-color: rgb(175, 59, 13);
+}
+.team-page .card {
+  width: 550px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+.team-page .card__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.team-page .card__img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.team-page .card__title {
+  color: white;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.02em;
+  padding-bottom: 10px;
+}
+.team-page .card__link {
+  display: block;
+  color: rgb(246, 140, 30);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.3333333333;
+  letter-spacing: 0.02em;
+  padding-bottom: 20px;
+}
+.team-page .card__description {
+  color: white;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+.team-page .card__description-box {
+  padding-left: 20px;
+}
+.team-page .card__social {
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.team-page .card__svg {
+  fill: white;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team-page .card__svg-box {
+  width: 40px;
+  height: 40px;
+}
+.team-page .card__svg-box:hover .card__svg {
+  fill: rgb(246, 140, 30);
+}
+.team-page .card__svg-box:nth-child(n+2) {
+  margin-left: 5px;
+}
+
+@-webkit-keyframes animTeamPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animTeamPage {
   from {
     opacity: 0;
   }
