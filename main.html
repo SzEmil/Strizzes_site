@@ -113,7 +113,7 @@
               <p class="services__text">
                 Niejednokrotnie projektując swoją linnie produkcyjną bądź
                 planując stanowisko zmagamy się z problemem dobrania
-                odpowiednich parametrów manipualtora. Dobierając odpowiednie
+                odpowiednich parametrów manipulatora. Dobierając odpowiednie
                 urzadzenie musimy wybierać optymalny wariant pomiędzy ceną,
                 rozmiarem, a parametrami mechanicznymi. Teraz nie musi to być
                 problem. Nasz zespół jest wstanie zaprojektować manipulator
@@ -303,20 +303,57 @@
                 </address>
               </li>
             </ul>
-            <div>
-              <!-- <form class="contact-form">
+            <!-- <div>
+              <form class="contact-form">
                 <label class="contact-form__label">
                   Email
                   <input type="email" name="email" required />
                 </label>
                 <label class="contact-form__label">
-                  Password
+                  Twoja wiadomość do nas
                   <input type="password" name="password" required />
                 </label class="contact-form__label">
 
-                <button type="submit">Submit</button>
-              </form> -->
-            </div>
+                <button type="submit">Wyślij</button>
+              </form>
+            </div> -->
+            <form
+              class="form-contact"
+              action="/src/serwer/form-main.php"
+              method="post"
+            >
+              <div class="form-contact__group">
+                <label for="name">Imię:</label>
+                <input
+                  type="text"
+                  class="form-contact__input"
+                  id="name"
+                  name="name"
+                  required
+                />
+              </div>
+              <div class="form-contact__group">
+                <label for="email">E-mail:</label>
+                <input
+                  type="email"
+                  class="form-contact__input"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="form-contact__group">
+                <label for="message">Wiadomość:</label>
+                <textarea
+                  class="form-contact__input form-contact__input--size"
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="form-contact__btn">Wyślij</button>
+            </form>
           </div>
         </div>
       </section>
