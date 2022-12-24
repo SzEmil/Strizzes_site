@@ -1,5 +1,5 @@
 .team-liner {
-  display: block;
+  display: none;
   position: absolute;
   width: 50px;
   height: 100%;
@@ -46,7 +46,7 @@
     }
     &-text {
       padding-top: 20px;
-      width: 500px;
+      max-width: 500px;
       color: white;
       font-weight: 200;
       font-size: 14px;
@@ -87,11 +87,12 @@
 
     &__box {
       display: flex;
+      align-items: center;
     }
 
     &__img {
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
     }
 
@@ -155,6 +156,35 @@
       }
     }
   }
+}
+
+@media screen and (min-width: 769px) {
+  .team-liner {
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    background: $main-color;
+    right: 0;
+    top: 0;
+  }
+  .team-page {
+    .card {
+      &__img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+
+      &__box {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
 }
 
 @keyframes animTeamPage {

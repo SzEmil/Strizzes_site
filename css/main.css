@@ -1989,7 +1989,7 @@ header {
   }
 }
 .team-liner {
-  display: block;
+  display: none;
   position: absolute;
   width: 50px;
   height: 100%;
@@ -2047,7 +2047,7 @@ header {
 }
 .team-page__description-text {
   padding-top: 20px;
-  width: 500px;
+  max-width: 500px;
   color: white;
   font-weight: 200;
   font-size: 14px;
@@ -2094,10 +2094,13 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .team-page .card__img {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
 }
 .team-page .card__title {
@@ -2159,6 +2162,30 @@ header {
   margin-left: 5px;
 }
 
+@media screen and (min-width: 769px) {
+  .team-liner {
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    background: rgb(246, 140, 30);
+    right: 0;
+    top: 0;
+  }
+  .team-page .card__img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  .team-page .card__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 @-webkit-keyframes animTeamPage {
   from {
     opacity: 0;
@@ -2167,7 +2194,6 @@ header {
     opacity: 1;
   }
 }
-
 @keyframes animTeamPage {
   from {
     opacity: 0;
