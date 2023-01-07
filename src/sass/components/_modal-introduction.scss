@@ -1,236 +1,253 @@
 .backdrop-introduction {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-  transition-property: opacity;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-property: opacity;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  display: none;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	display: none;
 }
 .modal-intr {
-  display: block;
+	display: block;
 }
 .modal-introduction {
-  background-color: white;
-  position: relative;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+	background-color: white;
+	position: relative;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+		0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
 
-  height: 80%;
-  width: 80%;
-  overflow-y: scroll;
+	height: 80%;
+	width: 80%;
+	overflow-y: scroll;
 
-  transition-property: opacity;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-property: opacity;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  animation-name: animModalIntroduction;
-  animation-duration: 0.5s;
-  animation-direction: normal;
-  animation-timing-function: $animationTiming;
+	animation-name: animModalIntroduction;
+	animation-duration: 0.5s;
+	animation-direction: normal;
+	animation-timing-function: $animationTiming;
 
-  &__btn {
-    position: absolute;
-    cursor: pointer;
-    right: 10px;
-    top: 10px;
-    background-color: transparent;
-    border: none;
-    color: black;
-  }
+	&__btn {
+		position: absolute;
+		cursor: pointer;
+		right: 10px;
+		top: 10px;
+		background-color: transparent;
+		border: none;
+		color: black;
+	}
 }
 .article-introduction {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
 
-  &__text-box {
-    display: flex;
-    flex-direction: column;
-    max-width: 800px;
+	&__text-box {
+		display: flex;
+		flex-direction: column;
+		max-width: 800px;
 
-    padding-bottom: 50px;
-  }
-  &__title {
-    color: black;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: calc(28 / 24);
-    letter-spacing: 0.02em;
+		padding-bottom: 50px;
+	}
+	&__title {
+		color: black;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: calc(28 / 24);
+		letter-spacing: 0.02em;
 
-    max-width: 400px;
-  }
+		max-width: 400px;
+	}
 
-  &__underline {
-    margin-top: 20px;
-    width: 200px;
-    height: 2px;
-    background-color: $main-color;
-  }
+	&__underline {
+		margin-top: 20px;
+		width: 200px;
+		height: 2px;
+		background-color: $main-color;
+	}
 
-  &__description {
-    padding-top: 20px;
-    font-family: "Kanit";
-    font-weight: 200;
-    font-size: 14px;
-    line-height: calc(28 / 20);
-    letter-spacing: 0.02em;
-  }
+	&__description {
+		padding-top: 20px;
+		font-family: 'Kanit';
+		font-weight: 200;
+		font-size: 14px;
+		line-height: calc(28 / 20);
+		letter-spacing: 0.02em;
+	}
 
-  &__img-box {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  &__img {
-    width: 100%;
-  }
+	&__img-box {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	&__img {
+		width: 100%;
+	}
+}
+.gallery__item {
+	position: relative;
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+		0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+	width: 300px;
 }
 
+.gallery__image:hover {
+	transform: scale(1.03);
+}
+
+.gallery__image {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 @media screen and (min-width: 769px) {
-  .modal-introduction {
-    margin: 10px;
+	.modal-introduction {
+		margin: 10px;
 
-    &__btn {
-      position: absolute;
-      cursor: pointer;
-      right: 10px;
-      top: 10px;
-      background-color: transparent;
-      border: none;
-      color: black;
-    }
-  }
-  .article-introduction {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+		&__btn {
+			position: absolute;
+			cursor: pointer;
+			right: 10px;
+			top: 10px;
+			background-color: transparent;
+			border: none;
+			color: black;
+		}
+	}
+	.article-introduction {
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
 
-    &__text-box {
-      display: flex;
-      flex-direction: column;
-      max-width: 800px;
+		&__text-box {
+			display: flex;
+			flex-direction: column;
+			max-width: 800px;
 
-      padding-bottom: 50px;
-    }
-    &__title {
-      color: black;
-      font-weight: 400;
-      font-size: 24px;
-      line-height: calc(28 / 24);
-      letter-spacing: 0.02em;
+			padding-bottom: 50px;
+		}
+		&__title {
+			color: black;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: calc(28 / 24);
+			letter-spacing: 0.02em;
 
-      max-width: 400px;
-    }
+			max-width: 400px;
+		}
 
-    &__underline {
-      margin-top: 20px;
-      width: 200px;
-      height: 2px;
-      background-color: $main-color;
-    }
+		&__underline {
+			margin-top: 20px;
+			width: 200px;
+			height: 2px;
+			background-color: $main-color;
+		}
 
-    &__description {
-      padding-top: 20px;
-      font-family: "Kanit";
-      font-weight: 200;
-      font-size: 14px;
-      line-height: calc(28 / 20);
-      letter-spacing: 0.02em;
-    }
+		&__description {
+			padding-top: 20px;
+			font-family: 'Kanit';
+			font-weight: 200;
+			font-size: 14px;
+			line-height: calc(28 / 20);
+			letter-spacing: 0.02em;
+		}
 
-    &__img-box {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    &__img {
-      max-width: 600px;
-    }
-  }
+		&__img-box {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		&__img {
+			max-width: 600px;
+		}
+	}
 }
 
 @media screen and (min-width: 1200px) {
-  .modal-introduction {
-    margin: 10px;
-    width: 60vw;
+	.modal-introduction {
+		margin: 10px;
+		width: 60vw;
 
-    &__btn {
-      position: absolute;
-      cursor: pointer;
-      right: 10px;
-      top: 10px;
-      background-color: transparent;
-      border: none;
-      color: black;
-    }
-  }
-  .article-introduction {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+		&__btn {
+			position: absolute;
+			cursor: pointer;
+			right: 10px;
+			top: 10px;
+			background-color: transparent;
+			border: none;
+			color: black;
+		}
+	}
+	.article-introduction {
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
 
-    &__text-box {
-      display: flex;
-      flex-direction: column;
-      max-width: 800px;
+		&__text-box {
+			display: flex;
+			flex-direction: column;
+			max-width: 800px;
 
-      padding-bottom: 50px;
-    }
-    &__title {
-      color: black;
-      font-weight: 400;
-      font-size: 24px;
-      line-height: calc(28 / 24);
-      letter-spacing: 0.02em;
+			padding-bottom: 50px;
+		}
+		&__title {
+			color: black;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: calc(28 / 24);
+			letter-spacing: 0.02em;
 
-      max-width: 400px;
-    }
+			max-width: 400px;
+		}
 
-    &__underline {
-      margin-top: 20px;
-      width: 200px;
-      height: 2px;
-      background-color: $main-color;
-    }
+		&__underline {
+			margin-top: 20px;
+			width: 200px;
+			height: 2px;
+			background-color: $main-color;
+		}
 
-    &__description {
-      padding-top: 20px;
-      font-family: "Kanit";
-      font-weight: 200;
-      font-size: 14px;
-      line-height: calc(28 / 20);
-      letter-spacing: 0.02em;
-    }
+		&__description {
+			padding-top: 20px;
+			font-family: 'Kanit';
+			font-weight: 200;
+			font-size: 14px;
+			line-height: calc(28 / 20);
+			letter-spacing: 0.02em;
+		}
 
-    &__img-box {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    &__img {
-      max-width: 800px;
-    }
-  }
+		&__img-box {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		&__img {
+			max-width: 800px;
+		}
+	}
 }
 
 @keyframes animModalIntroduction {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }

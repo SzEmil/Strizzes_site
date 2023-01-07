@@ -45,6 +45,21 @@
 			rel="stylesheet"
 			href="css/main.css"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.11.0/simple-lightbox.css"
+			integrity="sha512-HL1y3YvMbRp23VyjlaZDXCwtM5iJ6amoDyEcjpANI6qObX9pb8B7c31UJVyesMb3LKvmS8sr6eKOFMAEaHgf+g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.11.0/simple-lightbox.min.js"
+			integrity="sha512-6MY1+N+yqKr8NaWCd7SsFAavdwAnxKihOP2BI0MnU+k8khGU+op83TxJE7dYj0o2mmtfDbRs7U1jAmAeEOjUnw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+
 	</head>
 	<body>
 		<header>
@@ -471,26 +486,57 @@
 						</p>
 					</div>
 					<div class="article-introduction__img-box">
-						<img
-							class="article-introduction__img"
-							src="src/images/header/baner.png"
-							alt="Manipulator Strizz v2"
-						/>
-						<img
-							class="article-introduction__img"
-							src="src/images/modal-introduction/przegob.jpg"
-							alt="Joint"
-						/>
-						<img
-							class="article-introduction__img"
-							src="src/images/modal-introduction/manipulator.png"
-							alt="Manipulator Strizz v2"
-						/>
-						<img
-							class="article-introduction__img"
-							src="src/images/modal-introduction/screws.png"
-							alt="Screws"
-						/>
+						<a
+							class="gallery__item"
+							href="/src/images/modal-introduction/manipulator.png"
+						>
+							<img
+								class="gallery__image"
+								src="/src/images/modal-introduction/manipulator.png"
+								alt="Image description"
+							/>
+						</a>
+
+						<a
+							class="gallery__item"
+							href="/src/images/modal-introduction/photo_manipulator2.png"
+						>
+							<img
+								class="gallery__image"
+								src="/src/images/modal-introduction/photo_manipulator2.png"
+								alt="Image description"
+							/>
+						</a>
+						<a
+							class="gallery__item"
+							href="/src/images/modal-introduction/photo_manipulator3.jpg"
+						>
+							<img
+								class="gallery__image"
+								src="/src/images/modal-introduction/photo_manipulator3.jpg"
+								alt="Image description"
+							/>
+						</a>
+						<a
+							class="gallery__item"
+							href="/src/images/modal-introduction/przegob.jpg"
+						>
+							<img
+								class="gallery__image"
+								src="/src/images/modal-introduction/przegob.jpg"
+								alt="Image description"
+							/>
+						</a>
+						<a
+							class="gallery__item"
+							href="/src/images/modal-introduction/screws.png"
+						>
+							<img
+								class="gallery__image"
+								src="/src/images/modal-introduction/screws.png"
+								alt="Image description"
+							/>
+						</a>
 					</div>
 				</article>
 			</div>
@@ -613,7 +659,11 @@
 			</ul>
 		</div>
 
-		<script src="src/js/introduction-modal.js"></script>
 		<script src="src/js/mobile-menu.js"></script>
+		<script
+			defer
+			src="/src/js/modal-gallery.js"
+		></script>
+		<script src="src/js/introduction-modal.js"></script>
 	</body>
 </html>
