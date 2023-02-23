@@ -903,8 +903,9 @@ header {
   }
 }
 .introduction {
-  padding: 50px 0;
+  padding: 50px 0 0 0;
   background-color: white;
+  height: 100vh;
 }
 .introduction__box {
   display: -webkit-box;

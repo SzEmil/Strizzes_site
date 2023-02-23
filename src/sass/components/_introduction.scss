@@ -1,6 +1,7 @@
 .introduction {
-  padding: 50px 0;
+  padding: 50px 0 0 0;
   background-color: white;
+  height: 100vh;
 
   &__box {
     display: flex;
@@ -19,7 +20,7 @@
   &__title {
     max-width: 450px;
     text-align: left;
-    font-style: "Kanit";
+    font-style: 'Kanit';
     font-weight: 200;
     font-size: 28px;
     line-height: calc(28 / 20);
@@ -37,7 +38,7 @@
   }
   &__description {
     padding-top: 40px;
-    font-family: "Kanit";
+    font-family: 'Kanit';
     font-weight: 200;
     font-size: 14px;
     line-height: calc(28 / 20);
@@ -46,7 +47,7 @@
 
   &__btn {
     display: block;
-    font-family: "Kanit";
+    font-family: 'Kanit';
     font-weight: 400;
     font-size: 14px;
     line-height: calc(28 / 14);
@@ -74,7 +75,7 @@
     right: 0;
     bottom: 0;
 
-    font-family: "Kanit";
+    font-family: 'Kanit';
     font-weight: 400;
     font-size: 14px;
     line-height: calc(28 / 14);
